@@ -1,0 +1,60 @@
+
+<div class="order-summaries">
+    <div class="order">
+        <div class="type">
+            <button type="button">Dine in</button>
+            <button type="button">Take away</button>
+            <button type="button">Delivery</button>
+        </div>
+    </div>
+    <div class="customer input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="Customer">
+        <button class="btn btn-success" type="button">Add</button>
+    </div>
+    <div class="order-items">
+        <table>
+            <thead class="">
+                <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of orderItems">
+                    <td><b>{{ item.name }}</b><br>{{ item.option1 }}<br>{{ item.option2 }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>\${{ item.price }}</td> <!-- \ is for escaping $ in HTML -->
+                </tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="promo input-group input-group-sm">
+        <input type="text" class="form-control" placeholder="Promo Code">
+        <button class="btn btn-success" type="button">Promo Code</button>
+    </div>
+    <div class="order-total">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Discount</td>
+                    <td>Tk 0.00</td>
+                </tr>
+                <tr>
+                    <td>Vat</td>
+                    <td>Tk 0.00</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>Tk 999.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="order-action">
+        <button type="button" class="on-hold-button col">On Hold</button>
+        <button type="button" class="payment-button col" data-bs-toggle="modal" data-bs-target="#PaymentModal">Payment</button>
+        <button type="button" class="place-order-button col">Place Order</button>
+        <button type="button" class="payment-completed col">Completed</button>
+    </div>
+</div>

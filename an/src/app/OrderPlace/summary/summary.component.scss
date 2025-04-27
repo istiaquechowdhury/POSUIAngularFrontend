@@ -1,0 +1,49 @@
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.order-summaries {
+    @extend .m-2, .d-flex, .flex-column, .card, .p-2, .small;
+    min-height: 0;
+
+    .type, .customer, .order-items {
+        @extend .mb-1;
+    }
+
+    .type {
+        @extend .d-flex;
+
+        button {
+            @extend .col, .btn, .btn-sm, .btn-outline-secondary, .mx-1;
+        }
+    }
+
+    .order-items {
+        @extend .flex-grow-1, .overflow-y-scroll;
+    }
+
+    .order-items table, .order-total table {
+        @extend .table, .table-sm, .small;
+
+        tr td:last-child {
+            @extend .text-end;
+        }
+    }
+
+    .order-action {
+        @extend .d-flex, .flex-wrap, .justify-content-center;
+
+        button {
+            @extend .col-5, .btn, .btn-sm, .btn-outline-secondary, .m-1;
+        }
+    }
+
+
+
+    .order-summary {
+        @extend .card, .d-flex, .flex-row, .justify-content-between, .p-2, .mb-3;
+
+        span {
+            @extend .h1, .mb-0;
+        }
+    }
+}

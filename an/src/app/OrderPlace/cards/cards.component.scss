@@ -1,0 +1,55 @@
+
+@import '../../../../node_modules/bootstrap/scss/bootstrap.scss';
+   
+
+
+.menu-filters {
+    @extend .d-flex, .align-items-center, .mb-3, .pb-2, .border-bottom, .border-secondary;
+
+    .header {
+        @extend .h3;
+    }
+
+    .categories {
+        @extend .ms-2;
+    }
+
+    button {
+        @extend .btn, .btn-sm, .btn-outline-secondary;
+    }
+
+   
+}
+
+.menu-items {
+    @extend .row, .g-2;
+
+    .menu-item-wrapper {
+        @extend .col-12, .col-sm-6, .col-md-2;
+
+        
+        .menu-item {
+            @extend .card;
+            cursor: pointer;
+
+            .menu-image {
+                @extend .card-img-top;
+            }
+
+            .content {
+                @extend .card-body, .p-2, .d-flex, .flex-column, .text-center;
+
+                label {
+                    @extend .fw-bold, .overflow-hidden;
+                    height: 3rem;
+                }
+
+                span {
+                    @extend .small;
+                }
+            }
+        }
+
+    }
+}
+    

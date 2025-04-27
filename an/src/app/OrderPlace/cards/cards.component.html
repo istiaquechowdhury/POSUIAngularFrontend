@@ -1,0 +1,29 @@
+
+    <div class="menu-filters">
+        <span class="header">Place Order</span>
+        <span class="flex-blank-fill"></span>
+        <div class="categories">
+            <label>Categories</label>
+            <button type="button">All</button>
+            <button type="button">Starters</button>
+            <button type="button">Soups</button>
+            <button type="button">Salads</button>
+            <button type="button">Mains</button>
+            <button type="button">Sides</button>
+            <button type="button">Beverages</button>
+        </div>
+    </div>
+    <div class="menu-items">
+        
+        <div class="menu-item-wrapper" *ngFor="let item of menuItems">
+            <div class="menu-item">
+                <img class="menu-image" src="/Images/food.jpg" />
+                <div class="content">
+                    <label>{{item.name}}</label>
+                    <span>{{item.price}}</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
